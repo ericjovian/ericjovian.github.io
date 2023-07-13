@@ -52,12 +52,16 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 /* Global Style */
-  body {
-      height: 100%;
-      width: 100%;
-  }
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
 
-  #root {
-      height: 100%;
-      width: 100%;
-  }
+#root {
+  height: 100%;
+  width: 100%;
+}

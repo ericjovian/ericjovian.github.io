@@ -15,11 +15,11 @@ export interface BannerProps {
 export const Banner: React.FC<BannerProps> = ({ className, src, name, age, email, city, description }) => {
     const myVariants: Variants = {
         offscreen: {
-          y: 400,
-          rotate: -10
+          y: 200,
+          rotate:-10
         },
         onscreen: {
-          y: 400,
+          y: 100,
           rotate: 0,
           transition: {
             type: "spring",

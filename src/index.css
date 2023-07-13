@@ -53,6 +53,8 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* Global Style */
 html {
+  height: 100%;
+  width: 100vw;
   overflow: scroll;
   overflow-x: hidden;
 }
@@ -63,5 +65,5 @@ html {
 
 #root {
   height: 100%;
-  width: 100%;
+  width: 100vw;
 }

@@ -1,43 +1,24 @@
 import React from 'react'
 import { Image } from '../atoms/Image'
-import { Variants, motion } from 'framer-motion'
 
 export interface BannerProps {
     className?: string
+    id?: string
     src: string
     name: string
     age: number
     email: string
     city: string
     description: string
+    onLoad?: () => void
 }
 
-export const Banner: React.FC<BannerProps> = ({ className, src, name, age, email, city, description }) => {
-    const myVariants: Variants = {
-        offscreen: {
-          y: 200,
-          rotate:-10
-        },
-        onscreen: {
-          y: 100,
-          rotate: 0,
-          transition: {
-            type: "spring",
-            bounce: 0.4,
-            duration: 0.8
-          }
-        }
-      };
+export const Banner: React.FC<BannerProps> = ({ className, id, src, name, age, email, city, description, onLoad }) => {
+
     return (
-        <div className={`${className}`}>
-            <motion.div 
-                className={`${className}__content`} 
-                initial="offscreen"
-                whileInView="onscreen"
-                viewport={{ once: false, amount: 0.8 }}
-                variants={myVariants}
-                >
-                <Image className={`${className}__avatar`} src={src} alt={name} />
+        <div className={`${className}`} id={`${id}`}>
+            <div className={`${className}__content`}>
+                <Image className={`${className}__avatar`} src={src} alt={name} onLoad={onLoad} />
                 <div className={`${className}__info`}>
                     <div className={`${className}__info__name`}>
                         {name}
@@ -55,7 +36,7 @@ export const Banner: React.FC<BannerProps> = ({ className, src, name, age, email
                         {description}
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </div>
     )
 }

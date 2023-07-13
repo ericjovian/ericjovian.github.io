@@ -1,0 +1,25 @@
+[
+    {
+        "company": "PT. Inovasi Anak Indonesia - PARKEE",
+        "location": "Jakarta, Indonesia",
+        "from": "Feb 2021",
+        "to": "May 2021",
+        "role": "Front End Developer Intern",
+        "description": [
+            "Produced a website compatible with multiple browsers.",
+            "Developed design to meet specific requirements, such as language-switching with particular layout, responsive web page, etc.",
+            "Developed landing page, dashboard, about page, and more; with React.js and Gatsby.js"
+        ]
+    },
+    {
+        "company": "PT. Shopee International Indonesia - Sea Labs",
+        "location": "Jakarta, Indonesia",
+        "from": "Mar 2023",
+        "to": "May 2023",
+        "role": "Junior Engineer",
+        "description": [
+            "Training program covering the software engineering fundamentals, best coding practices on common tech stacks and tools used in the enterprise development center",
+            "On-the-job training through simulated and real projects using Golang, React.js, Redux, TypeScript, PostgeSQL, SASS, and more."
+        ]
+    }
+]

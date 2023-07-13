@@ -1,0 +1,20 @@
+[
+    {
+        "university": "Binus International University",
+        "location": "Jakarta, Indonesia",
+        "major": "Computer Science",
+        "degree": "Bachelor",
+        "start": "2018",
+        "end": "2022",
+        "gpa": "3.27"
+    },
+    {
+        "university": "University of Wollongong",
+        "location": "Sydney, Australia",
+        "major": "Cyber Security",
+        "degree": "Bachelor",
+        "start": "2021",
+        "end": "2022",
+        "gpa": ""
+    }
+]

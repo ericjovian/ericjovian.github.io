@@ -1,11 +1,7 @@
 import React, {useState} from 'react'
 import { Button } from '../atoms/Button';
 
-export interface NavbarProps {
-    className?: string
-}
-
-export const Navbar: React.FC<NavbarProps> = ({ className }) => {
+export const Navbar: React.FC = () => {
     const [scroll, setScroll] = useState(false);
     const scrollToSection = (sectionId: string): void => {
         const section = document.querySelector(sectionId);
@@ -30,18 +26,13 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
 
     return (
         <div>
-            <nav className="navbar" id="navbar" onScroll={changeScroll} style={{backgroundColor: scroll ? '#696969' : 'transparent'}}>
+            <nav className="navbar" id="navbar" onScroll={changeScroll} style={{backgroundColor: scroll ? '#fff' : 'transparent'}}>
                 <div className="navbar__container">
                     <div className="navbar__logo">
-                        <Button className="navbar__logo__button" onClick={scrollToHero}>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" width="48px" height="48px"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5v-2.23l-10 5-10-5V17z"/></svg>
-                        </Button>
+                        <Button className="navbar__item__button" onClick={scrollToHero}>Home</Button>
                     </div>
                     <div className="navbar__menu">
                         <ul className="navbar__menu__list">
-                            <li className="navbar__item">
-                                <Button className="navbar__item__button" onClick={scrollToHero}>Home</Button>
-                            </li>
                             <li className="navbar__item">
                                 <Button className="navbar__item__button" onClick={scrollToAbout}>About</Button>
                             </li>

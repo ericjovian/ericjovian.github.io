@@ -30,8 +30,7 @@ const Home:React.FC = () => {
     useEffect(() => {
         var data = require('../assets/datas/bio.json')
         setBiodata(data)
-        dispatch(setIsLoading(true))
-    }, [dispatch])
+    }, [])
 
     return (
         <>

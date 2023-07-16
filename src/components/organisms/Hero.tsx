@@ -1,5 +1,6 @@
 import React from 'react'
 import { Image } from '../atoms/Image'
+import { Reveal } from '../molecules/Reveal'
 
 export interface HeroProps {
     className?: string
@@ -15,15 +16,17 @@ export const Hero: React.FC<HeroProps> = ({ className, id, src, name, occupation
     return (
         <div className={`${className}`} id={`${id}`}>
             <div className={`${className}__content`} >
-                <Image className={`${className}__avatar`} src={src} alt={name} loading={loading} onLoad={onLoad} />
-                <div className={`${className}__info`}>
+                <Reveal>
+                    <Image className={`${className}__avatar`} src={src} alt={name} loading={loading} onLoad={onLoad} />
+                </Reveal>
+                <Reveal className={`${className}__info`}>
                     <div className={`${className}__info__name`}>
                         Hi, my name is {name}
                     </div>
                     <div className={`${className}__info__occupation`}>
                         I'm a {occupation}.
                     </div>
-                </div>
+                </Reveal>
             </div>
         </div>
     )

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Image } from '../atoms/Image'
+import { Reveal } from '../molecules/Reveal'
 
 export interface BannerProps {
     className?: string
@@ -18,8 +19,10 @@ export const Banner: React.FC<BannerProps> = ({ className, id, src, name, age, e
     return (
         <div className={`${className}`} id={`${id}`}>
             <div className={`${className}__content`}>
-                <Image className={`${className}__avatar`} src={src} alt={name} onLoad={onLoad} />
-                <div className={`${className}__info`}>
+                <Reveal>
+                    <Image className={`${className}__avatar`} src={src} alt={name} onLoad={onLoad} />
+                </Reveal>
+                <Reveal className={`${className}__info`}>
                     <div className={`${className}__info__name`}>
                         {name}
                     </div>
@@ -35,7 +38,7 @@ export const Banner: React.FC<BannerProps> = ({ className, id, src, name, age, e
                     <div className={`${className}__info__description`}>
                         {description}
                     </div>
-                </div>
+                </Reveal>
             </div>
         </div>
     )

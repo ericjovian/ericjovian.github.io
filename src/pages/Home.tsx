@@ -18,7 +18,6 @@ interface Biodata{
 
 const Home:React.FC = () => {
     const dispatch = useAppDispatch()
-    dispatch(setIsLoading(true))
     const [biodata, setBiodata] = useState<Biodata>({
         name: '',
         age: 23,
@@ -31,7 +30,8 @@ const Home:React.FC = () => {
     useEffect(() => {
         var data = require('../assets/datas/bio.json')
         setBiodata(data)
-    }, [])
+        dispatch(setIsLoading(true))
+    }, [dispatch])
 
     return (
         <>

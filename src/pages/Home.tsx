@@ -8,6 +8,7 @@ import data from '../assets/datas/bio.json'
 import './Home.sass'
 import { Timeline } from '../components/templates/Timeline'
 import { Footer } from '../components/molecules/Footer'
+import { NavbarMobile } from '../components/molecules/NavbarMobile'
 
 interface Biodata{
     name: string,
@@ -36,6 +37,7 @@ const Home:React.FC = () => {
     return (
         <>
             <Navbar />
+            <NavbarMobile/>
             <Hero
                 className="hero"
                 id='about'

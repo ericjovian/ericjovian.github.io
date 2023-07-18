@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { Button } from '../atoms/Button';
+import { Image } from '../atoms/Image';
 
-export const NavbarMpbile: React.FC = () => {
-    const [scroll, setScroll] = useState(false);
+export const NavbarMobile: React.FC = () => {
     const scrollToSection = (sectionId: string): void => {
         const section = document.querySelector(sectionId);
         if (section) {
@@ -16,42 +16,34 @@ export const NavbarMpbile: React.FC = () => {
     const scrollToEducation = (): void => scrollToSection("#education");
     const scrollToContact = (): void => scrollToSection("#contact");
       
-    const changeScroll = () => {
-        if(window.scrollY >= 100) {
-            setScroll(true);
-        } else {
-            setScroll(false);
-        }
-    }
-
     return (
         <div>
-            <nav className="navbar__mobile" id="navbar" onScroll={changeScroll}>
+            <nav className="navbar__mobile" id="navbar">
                 <div className="navbar__mobile__menu">
                     <ul className="navbar__mobile__menu__list">
                         <li className="navbar__mobile__item">
-                            <Button className="navbar__mobile__item__button" onClick={scrollToHero}>
-                                Home
-                            </Button>
-                        </li>
-                        <li className="navbar__mobile__item">
                             <Button className="navbar__mobile__item__button" onClick={scrollToAbout}>
-                                About
-                                </Button>
-                        </li>
-                        <li className="navbar__mobile__item">
-                            <Button className="navbar__mobile__item__button" onClick={scrollToExperience}>
-                                Experience
+                                <Image className='navbar__mobile__logo' src="https://img.icons8.com/ios-filled/50/000000/about.png" alt="about"/>
                             </Button>
                         </li>
                         <li className="navbar__mobile__item">
                             <Button className="navbar__mobile__item__button" onClick={scrollToEducation}>
-                                Education
+                                <Image className='navbar__mobile__logo' src="https://img.icons8.com/ios-filled/50/000000/graduation-cap.png" alt="education"/>
+                            </Button>
+                        </li>
+                        <li className="navbar__mobile__item">
+                            <Button className="navbar__mobile__item__button" onClick={scrollToHero}>
+                                <Image className='navbar__mobile__logo navbar__mobile__logo__home' src="https://img.icons8.com/ios-filled/50/000000/home.png" alt="home"/>
+                            </Button>
+                        </li>
+                        <li className="navbar__mobile__item">
+                            <Button className="navbar__mobile__item__button" onClick={scrollToExperience}>
+                                <Image className='navbar__mobile__logo' src="https://img.icons8.com/ios-filled/50/000000/work.png" alt="experience"/>
                             </Button>
                         </li>
                         <li className="navbar__mobile__item">
                             <Button className="navbar__mobile__item__button" onClick={scrollToContact}>
-                                Contact
+                                <Image className='navbar__mobile__logo' src="https://img.icons8.com/ios-filled/50/000000/contacts.png" alt="contact"/>
                             </Button>
                         </li>
                     </ul>

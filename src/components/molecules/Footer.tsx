@@ -6,7 +6,7 @@ export const Footer: React.FC = () => {
             <hr className="footer__line"/>
             <div className="footer__content">
                 <div className="footer__content__title">
-                    <h1>Footer</h1>
+                    <h1>Jovian</h1>
                 </div>
                 <div className="footer__content__links">
                     <a href="https://www.instagram.com/ericjovian" rel="noreferrer" target="_blank">

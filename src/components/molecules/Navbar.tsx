@@ -12,8 +12,8 @@ export const Navbar: React.FC = () => {
       
     const scrollToHero = (): void => scrollToSection("#hero");
     const scrollToAbout = (): void => scrollToSection("#about");
-    const scrollToExperience = (): void => scrollToSection("#experience");
     const scrollToEducation = (): void => scrollToSection("#education");
+    const scrollToExperience = (): void => scrollToSection("#experience");
     const scrollToContact = (): void => scrollToSection("#contact");
       
     const changeScroll = () => {
@@ -37,10 +37,10 @@ export const Navbar: React.FC = () => {
                                 <Button className="navbar__item__button" onClick={scrollToAbout}>About</Button>
                             </li>
                             <li className="navbar__item">
-                                <Button className="navbar__item__button" onClick={scrollToExperience}>Experience</Button>
+                                <Button className="navbar__item__button" onClick={scrollToEducation}>Education</Button>
                             </li>
                             <li className="navbar__item">
-                                <Button className="navbar__item__button" onClick={scrollToEducation}>Education</Button>
+                                <Button className="navbar__item__button" onClick={scrollToExperience}>Experience</Button>
                             </li>
                             <li className="navbar__item">
                                 <Button className="navbar__item__button" onClick={scrollToContact}>Contact</Button>

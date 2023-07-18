@@ -8,7 +8,7 @@ interface RevealProps {
     id?: string
 }
 
-export const Reveal: React.FC<RevealProps> = ({children, width = 'fit-content',className, id}) => {
+export const Reveal: React.FC<RevealProps> = ({children, width ,className, id}) => {
     const ref = useRef(null)
     const isInView = useInView(ref, {once: true})
 
